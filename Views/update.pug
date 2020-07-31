@@ -1,0 +1,28 @@
+div(class="modal fade" id="CRUD_update" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true")
+    div(class="modal-dialog")
+        div(class="modal-content")
+            div(class="modal-header")
+                h5(class="modal-title" id="exampleModalLabel") Update
+                button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                    span(aria-hidden="true") &times;
+            div(class="modal-body")
+                form(action="/update", method="post")
+                                div(class="form-group")
+                                    input(type="hidden", name="up_hidden" id="up_hidden")
+                                    label Full Name
+                                    input(type="text", id="up_name" name="up_name" class="form-control")
+                                div(class="form-group")
+                                    label Date
+                                    input(type="Date", name="up_Date" id="up_Date" class="form-control")
+                                div(class="form-group")
+                                    label Email
+                                    input(type="email", name="up_Email" id="up_Email" class="form-control")
+                                div(class="form-group")
+                                    br
+                                    select( class="form-select" name="up_gender" id="up_gender" aria-label="Default select example")
+                                        option() choose Gender
+                                        option(value="Male" name="gender") Male
+                                        option(value="Female" name="gender") Female
+                                hr
+                                button(class="btn btn-secondary mr-3" data-dismiss="modal") Close
+                                button(type="submit" class="btn btn-outline-warning") Update

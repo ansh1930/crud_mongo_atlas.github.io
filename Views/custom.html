@@ -1,0 +1,22 @@
+<script>
+   let Edit = document.querySelectorAll('.Edit')
+   Edit.forEach((item)=>{
+       item.addEventListener('click',(e)=>{
+        //    console.log(e.target.parentNode)
+        //    console.log(e.target.parentNode.parentNode.childrenElement)
+        let sname = e.target.parentElement.parentElement.childNodes[1].innerText
+        let sdate = e.target.parentElement.parentElement.childNodes[2].innerText
+        let semail = e.target.parentElement.parentElement.childNodes[3].innerText
+        let sgender = e.target.parentElement.parentElement.childNodes[4].innerText
+        let sid = e.target.parentElement.parentElement.childNodes[5].value
+
+        let up_name = document.getElementById('up_name').value = sname
+        let up_Date = document.getElementById('up_Date').value = sdate
+        let up_Email = document.getElementById('up_Email').value = semail
+        let up_gender = document.getElementById('up_gender').value = sgender
+        let up_hidden = document.getElementById('up_hidden').value = sid
+       })
+   })
+
+
+</script>

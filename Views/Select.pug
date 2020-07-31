@@ -1,0 +1,31 @@
+//- - var update = status_update
+//- - var Delete = status_delete
+//- if update
+//-      -var dialog_update = '#CRUD_update'
+//- if Delete
+//-      -var dialog_delete = '#CRUD_delete'
+
+div(class="container-fluid mt-5")
+    table(class="table")
+        thead
+            tr
+                th(scope="col") ID
+                th(scope="col") Full Name
+                th(scope="col") Date
+                th(scope="col") Email
+                th(scope="col") Gender
+                th(scope="col") Edit
+        tbody
+                - var count = 0
+                each val in data
+                    tr
+                        th(scope="row")=count+=1
+                        td=val.name
+                        td=val.Date
+                        td=val.Email
+                        td=val.Gender
+                        input(type="hidden" id="ID" value=val.id)
+                        td
+                            a(href="#" class=`btn btn-outline-info m-1 Edit` id="Edit" data-toggle="modal" data-target="#CRUD_update") EDIT
+                            |  / 
+                            a(href="/"+val.id class="btn btn-outline-danger m-1 Delete" name="Delete" id="Delete") DELETE
